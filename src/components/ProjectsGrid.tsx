@@ -2,6 +2,16 @@ import { useEffect, useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 interface Repository {
   id: number;
@@ -14,13 +24,22 @@ interface Repository {
   default_branch: string;
 }
 
-const GITHUB_USERNAME = "yourusername"; // Replace with your GitHub username
+const GITHUB_USERNAME = "black-heart-sketch"; // Replace with your GitHub username
+const PROJECTS_PER_PAGE = 6;
 
 export const ProjectsGrid = () => {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState<Repository[]>([]);
   const [projectImages, setProjectImages] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
   const { toast } = useToast();
+
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  const paginatedProjects = projects.slice(
+    (currentPage - 1) * PROJECTS_PER_PAGE,
+    currentPage * PROJECTS_PER_PAGE
+  );
 
   const extractImageFromReadme = (readmeContent: string): string | null => {
     const imgRegex = /!\[.*?\]\((.*?)\)|<img.*?src=["'](.*?)["']/i;
@@ -58,22 +77,37 @@ export const ProjectsGrid = () => {
   };
 
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchAllProjects = async () => {
       setLoading(true);
       try {
-        const response = await fetch(
-          `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`
-        );
+        let allRepos: Repository[] = [];
+        let page = 1;
+        let hasNextPage = true;
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch repositories");
+        while (hasNextPage) {
+          const response = await fetch(
+            `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100&page=${page}`
+          );
+
+          if (!response.ok) {
+            throw new Error("Failed to fetch repositories");
+          }
+
+          const repos: Repository[] = await response.json();
+          allRepos = [...allRepos, ...repos];
+
+          const linkHeader = response.headers.get('Link');
+          if (linkHeader && linkHeader.includes('rel="next"')) {
+            page++;
+          } else {
+            hasNextPage = false;
+          }
         }
 
-        const repos: Repository[] = await response.json();
-        setProjects(repos);
+        setProjects(allRepos);
 
         // Fetch images for each repo
-        const imagePromises = repos.map(async (repo) => {
+        const imagePromises = allRepos.map(async (repo) => {
           const image = await fetchReadmeImage(GITHUB_USERNAME, repo.name, repo.default_branch);
           return { name: repo.name, image };
         });
@@ -88,7 +122,7 @@ export const ProjectsGrid = () => {
       } catch (error) {
         toast({
           title: "Error",
-          description: "Failed to fetch GitHub projects. Please try again later.",
+          description: t('projects.error'),
           variant: "destructive",
         });
       } finally {
@@ -96,8 +130,8 @@ export const ProjectsGrid = () => {
       }
     };
 
-    fetchProjects();
-  }, [toast]);
+    fetchAllProjects();
+  }, [toast, t]);
 
   if (loading) {
     return (
@@ -110,23 +144,23 @@ export const ProjectsGrid = () => {
   if (projects.length === 0) {
     return (
       <div className="text-center py-20 text-muted-foreground">
-        No public repositories found
+        {t('projects.none')}
       </div>
     );
   }
 
   return (
-    <section id="projects" className="py-20 px-6 bg-muted/30">
+    <section id="projects" className="py-20 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-4xl font-bold mb-4 text-center">
-          Featured Projects
+          {t('projects.title')}
         </h2>
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          A collection of my recent work and open-source contributions
+          {t('projects.subtitle')}
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {paginatedProjects.map((project) => (
             <ProjectCard
               key={project.id}
               name={project.name}
@@ -135,10 +169,51 @@ export const ProjectsGrid = () => {
               forks={project.forks_count}
               language={project.language}
               htmlUrl={project.html_url}
-              imageUrl={projectImages[project.name]}
+              imageUrl={projectImages[project.name] || `https://via.placeholder.com/600x400/000000/FFFFFF?text=${project.name}`}
             />
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className="mt-12">
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCurrentPage((prev) => Math.max(prev - 1, 1));
+                    }}
+                  />
+                </PaginationItem>
+                {[...Array(totalPages)].map((_, i) => (
+                  <PaginationItem key={i}>
+                    <PaginationLink
+                      href="#"
+                      isActive={i + 1 === currentPage}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCurrentPage(i + 1);
+                      }}
+                    >
+                      {i + 1}
+                    </PaginationLink>
+                  </PaginationItem>
+                ))}
+                <PaginationItem>
+                  <PaginationNext
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+                    }}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
+        )}
       </div>
     </section>
   );

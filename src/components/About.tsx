@@ -1,26 +1,28 @@
 import { Code2, Rocket, Users, Lightbulb } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
+  const { t } = useTranslation();
   const highlights = [
     {
       icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code"
+      title: t('about.highlights.code.title'),
+      description: t('about.highlights.code.description')
     },
     {
       icon: Rocket,
-      title: "Fast Delivery",
-      description: "Agile development with rapid iteration cycles"
+      title: t('about.highlights.delivery.title'),
+      description: t('about.highlights.delivery.description')
     },
     {
       icon: Users,
-      title: "Team Player",
-      description: "Collaborative approach to problem-solving"
+      title: t('about.highlights.team.title'),
+      description: t('about.highlights.team.description')
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Staying ahead with cutting-edge technologies"
+      title: t('about.highlights.innovation.title'),
+      description: t('about.highlights.innovation.description')
     }
   ];
 
@@ -28,18 +30,15 @@ export const About = () => {
     <section id="about" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          About Me
+          {t('about.title')}
         </h2>
         
         <div className="mb-12 max-w-3xl mx-auto">
           <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-            I'm a passionate software engineer with a strong focus on building scalable web applications 
-            and solving complex technical challenges. With expertise in modern web technologies, I transform 
-            ideas into robust, user-friendly solutions.
+            {t('about.p1')}
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-            projects, or sharing knowledge with the developer community.
+            {t('about.p2')}
           </p>
         </div>
 
@@ -49,9 +48,9 @@ export const About = () => {
             return (
               <div 
                 key={index}
-                className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] group"
+                className="p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] group"
               >
-                <div className="mb-4 inline-block p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 group-hover:scale-110 transition-transform">
+                <div className="mb-4 inline-block p-3 rounded-lg bg-primary/10 group-hover:scale-110 transition-transform">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
