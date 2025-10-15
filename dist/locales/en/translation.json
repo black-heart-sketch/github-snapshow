@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "TCHOUA NGATCHOU NANA Samory",
+    "title": "Full-Stack Software Engineer",
+    "subtitle": "Specializing in building exceptional digital experiences. I create scalable web applications with a focus on clean code, modern architecture, and outstanding user experiences.",
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Projects Completed",
+      "technologies": "Technologies"
+    },
+    "buttons": {
+      "work": "View My Work",
+      "contact": "Get In Touch",
+      "resume": "Download Resume"
+    },
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile",
+      "email": "Email"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I'm a passionate software engineer with a strong focus on building scalable web applications and solving complex technical challenges. With expertise in modern web technologies, I transform ideas into robust, user-friendly solutions.",
+    "p2": "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
+    "highlights": {
+      "code": {
+        "title": "Clean Code",
+        "description": "Writing maintainable, scalable, and efficient code"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Agile development with rapid iteration cycles"
+      },
+      "team": {
+        "title": "Team Player",
+        "description": "Collaborative approach to problem-solving"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Staying ahead with cutting-edge technologies"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "tools": "Tools & Others"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A collection of my recent work and open-source contributions",
+    "error": "Failed to fetch GitHub projects. Please try again later.",
+    "none": "No public repositories found"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "email": "Email",
+    "location": "Location",
+    "city": "Your City, Country",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "title": "Software Engineer",
+    "subtitle": "Passionate about creating innovative solutions and building exceptional digital experiences. Let's collaborate and bring your ideas to life.",
+    "links": {
+      "title": "Quick Links",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "connect": {
+      "title": "Connect",
+      "github": "@black-heart-sketch",
+      "linkedin": "TCHOUA NGATCHOU NANA Samory",
+      "twitter": "@tchouanana74",
+      "email": "tchouanana74@gmail.com"
+    },
+    "copyright": "© {{year}} TCHOUA NGATCHOU NANA Samory. All rights reserved. Built with",
+    "builtWith": "using React & TypeScript",
+    "top": "Back to top"
+  }
+}
