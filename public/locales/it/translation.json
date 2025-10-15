@@ -1,7 +1,7 @@
 {
   "hero": {
     "greeting": "Ciao, sono",
-    "name": "Il tuo nome",
+    "name": "TCHOUA NGATCHOU NANA Samory",
     "title": "Ingegnere del software Full-Stack",
     "subtitle": "Specializzato nella creazione di esperienze digitali eccezionali. Creo applicazioni web scalabili con un focus su codice pulito, architettura moderna ed esperienze utente eccezionali.",
     "stats": {
@@ -77,12 +77,12 @@
     },
     "connect": {
       "title": "Connetti",
-      "github": "@tuoutente",
-      "linkedin": "Il tuo nome",
-      "twitter": "@tuoutente",
-      "email": "tua.email@example.com"
+      "github": "@black-heart-sketch",
+      "linkedin": "TCHOUA NGATCHOU NANA Samory",
+      "twitter": "@tchouanana74",
+      "email": "tchouanana74@gmail.com"
     },
-    "copyright": "© {{year}} Il tuo nome. Tutti i diritti riservati. Costruito con",
+    "copyright": "© {{year}} TCHOUA NGATCHOU NANA Samory. Tutti i diritti riservati. Costruito con",
     "builtWith": "usando React & TypeScript",
     "top": "Torna in cima"
   }

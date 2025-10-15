@@ -17,7 +17,7 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <a 
-            href="mailto:your.email@example.com"
+            href="mailto:tchouanana74@gmail.com"
             className="p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] group"
           >
             <div className="flex items-start gap-4">
@@ -26,7 +26,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">{t('contact.email')}</h3>
-                <p className="text-muted-foreground">your.email@example.com</p>
+                <p className="text-muted-foreground">tchouanana74@gmail.com</p>
               </div>
             </div>
           </a>

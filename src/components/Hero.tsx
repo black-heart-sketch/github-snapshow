@@ -19,10 +19,14 @@ export const Hero = () => {
       <div className="container relative z-10 text-center">
         <div className="mb-6 inline-block animate-fade-in">
           <div className="h-32 w-32 mx-auto rounded-full bg-gradient-to-r from-primary to-accent p-1">
-            <div className="h-full w-full rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                SE
-              </span>
+            <div className="h-full w-full rounded-full overflow-hidden bg-background">
+              <img
+                src="/moi.jpg"
+                alt="Profile"
+                className="h-full w-full object-cover"
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -102,7 +106,7 @@ export const Hero = () => {
             <Linkedin className="h-7 w-7" />
           </a>
           <a 
-            href="mailto:your.email@example.com"
+            href="mailto:tchouanana74@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors hover-scale"
             aria-label={t('hero.social.email')}
           >

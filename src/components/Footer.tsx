@@ -19,25 +19,25 @@ export const Footer = () => {
     { 
       icon: Github, 
       label: "GitHub", 
-      href: "https://github.com/yourusername",
+      href: "https://github.com/black-heart-sketch",
       username: t('footer.connect.github')
     },
     { 
       icon: Linkedin, 
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://linkedin.com/in/tchouanana74",
       username: t('footer.connect.linkedin')
     },
     { 
       icon: Twitter, 
       label: "Twitter", 
-      href: "https://twitter.com/yourusername",
+      href: "https://twitter.com/tchouanana74",
       username: t('footer.connect.twitter')
     },
     { 
       icon: Mail, 
       label: "Email", 
-      href: "mailto:your.email@example.com",
+      href: "mailto:tchouanana74@gmail.com",
       username: t('footer.connect.email')
     },
   ];

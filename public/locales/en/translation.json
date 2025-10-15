@@ -1,7 +1,7 @@
 {
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Your Name",
+    "name": "TCHOUA NGATCHOU NANA Samory",
     "title": "Full-Stack Software Engineer",
     "subtitle": "Specializing in building exceptional digital experiences. I create scalable web applications with a focus on clean code, modern architecture, and outstanding user experiences.",
     "stats": {
@@ -77,12 +77,12 @@
     },
     "connect": {
       "title": "Connect",
-      "github": "@yourusername",
-      "linkedin": "Your Name",
-      "twitter": "@yourusername",
-      "email": "your.email@example.com"
+      "github": "@black-heart-sketch",
+      "linkedin": "TCHOUA NGATCHOU NANA Samory",
+      "twitter": "@tchouanana74",
+      "email": "tchouanana74@gmail.com"
     },
-    "copyright": "© {{year}} Your Name. All rights reserved. Built with",
+    "copyright": "© {{year}} TCHOUA NGATCHOU NANA Samory. All rights reserved. Built with",
     "builtWith": "using React & TypeScript",
     "top": "Back to top"
   }
