@@ -8,10 +8,20 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ["github-snapshow.onrender.com"],
+    allowedHosts: [
+      "github-snapshow.onrender.com",
+      "localhost",
+      "127.0.0.1",
+      ".localhost",
+    ],
   },
   preview: {
-    allowedHosts: ["github-snapshow.onrender.com"],
+    allowedHosts: [
+      "github-snapshow.onrender.com",
+      "localhost",
+      "127.0.0.1",
+      ".localhost",
+    ],
   },
   plugins: [
     react(),
