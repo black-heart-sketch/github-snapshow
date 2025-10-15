@@ -1,15 +1,17 @@
 import { Github, Mail, Linkedin, ArrowDown, Code2, Briefcase, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const stats = [
-    { icon: Code2, label: "Years Experience", value: "5+" },
-    { icon: Briefcase, label: "Projects Completed", value: "50+" },
-    { icon: Award, label: "Technologies", value: "20+" },
+    { icon: Code2, label: t('hero.stats.experience'), value: "5+" },
+    { icon: Briefcase, label: t('hero.stats.projects'), value: "50+" },
+    { icon: Award, label: t('hero.stats.technologies'), value: "20+" },
   ];
 
   return (
@@ -33,16 +35,15 @@ export const Hero = () => {
         </div>
         
         <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          Hi, I'm <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Your Name</span>
+          {t('hero.greeting')} <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{t('hero.name')}</span>
         </h1>
         
         <p className="mb-4 text-2xl md:text-3xl font-semibold text-foreground/90 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Full-Stack Software Engineer
+          {t('hero.title')}
         </p>
         
         <p className="mb-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          Specializing in building exceptional digital experiences. I create scalable web applications 
-          with a focus on clean code, modern architecture, and outstanding user experiences.
+          {t('hero.subtitle')}
         </p>
 
         {/* Stats Section */}
@@ -67,7 +68,7 @@ export const Hero = () => {
             onClick={scrollToProjects}
             className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
           >
-            View My Work
+            {t('hero.buttons.work')}
             <ArrowDown className="ml-2 h-5 w-5" />
           </Button>
           <Button 
@@ -76,7 +77,7 @@ export const Hero = () => {
             className="border-primary/50 hover:bg-primary/10"
             asChild
           >
-            <a href="#contact">Get In Touch</a>
+            <a href="#contact">{t('hero.buttons.contact')}</a>
           </Button>
           <Button 
             size="lg" 
@@ -84,7 +85,7 @@ export const Hero = () => {
             className="border-primary/50 hover:bg-primary/10"
             asChild
           >
-            <a href="/resume.pdf" download>Download Resume</a>
+            <a href="/resume.pdf" download>{t('hero.buttons.resume')}</a>
           </Button>
         </div>
 
@@ -94,7 +95,7 @@ export const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors hover-scale"
-            aria-label="GitHub Profile"
+            aria-label={t('hero.social.github')}
           >
             <Github className="h-7 w-7" />
           </a>
@@ -103,14 +104,14 @@ export const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors hover-scale"
-            aria-label="LinkedIn Profile"
+            aria-label={t('hero.social.linkedin')}
           >
             <Linkedin className="h-7 w-7" />
           </a>
           <a 
             href="mailto:your.email@example.com"
             className="text-muted-foreground hover:text-primary transition-colors hover-scale"
-            aria-label="Email"
+            aria-label={t('hero.social.email')}
           >
             <Mail className="h-7 w-7" />
           </a>

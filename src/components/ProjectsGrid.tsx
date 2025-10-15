@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 interface Repository {
   id: number;
@@ -17,6 +18,7 @@ interface Repository {
 const GITHUB_USERNAME = "black-heart-sketch"; // Replace with your GitHub username
 
 export const ProjectsGrid = () => {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState<Repository[]>([]);
   const [projectImages, setProjectImages] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
@@ -88,7 +90,7 @@ export const ProjectsGrid = () => {
       } catch (error) {
         toast({
           title: "Error",
-          description: "Failed to fetch GitHub projects. Please try again later.",
+          description: t('projects.error'),
           variant: "destructive",
         });
       } finally {
@@ -97,7 +99,7 @@ export const ProjectsGrid = () => {
     };
 
     fetchProjects();
-  }, [toast]);
+  }, [toast, t]);
 
   if (loading) {
     return (
@@ -110,7 +112,7 @@ export const ProjectsGrid = () => {
   if (projects.length === 0) {
     return (
       <div className="text-center py-20 text-muted-foreground">
-        No public repositories found
+        {t('projects.none')}
       </div>
     );
   }
@@ -119,10 +121,10 @@ export const ProjectsGrid = () => {
     <section id="projects" className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-4xl font-bold mb-4 text-center">
-          Featured Projects
+          {t('projects.title')}
         </h2>
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          A collection of my recent work and open-source contributions
+          {t('projects.subtitle')}
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,16 +1,18 @@
 import { Mail, Github, Linkedin, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-20 px-6">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          Let's Work Together
+          {t('contact.title')}
         </h2>
         
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          {t('contact.subtitle')}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -23,7 +25,7 @@ export const Contact = () => {
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Email</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('contact.email')}</h3>
                 <p className="text-muted-foreground">your.email@example.com</p>
               </div>
             </div>
@@ -35,8 +37,8 @@ export const Contact = () => {
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Location</h3>
-                <p className="text-muted-foreground">Your City, Country</p>
+                <h3 className="text-xl font-semibold mb-2">{t('contact.location')}</h3>
+                <p className="text-muted-foreground">{t('contact.city')}</p>
               </div>
             </div>
           </div>
@@ -51,7 +53,7 @@ export const Contact = () => {
             >
               <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10">
                 <Github className="mr-2 h-5 w-5" />
-                GitHub
+                {t('contact.github')}
               </Button>
             </a>
             <a
@@ -61,7 +63,7 @@ export const Contact = () => {
             >
               <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10">
                 <Linkedin className="mr-2 h-5 w-5" />
-                LinkedIn
+                {t('contact.linkedin')}
               </Button>
             </a>
           </div>

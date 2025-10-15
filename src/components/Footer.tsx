@@ -1,16 +1,18 @@
 import { Github, Linkedin, Mail, Twitter, Heart, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const quickLinks = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: t('footer.links.about'), href: "#about" },
+    { label: t('footer.links.skills'), href: "#skills" },
+    { label: t('footer.links.projects'), href: "#projects" },
+    { label: t('footer.links.contact'), href: "#contact" },
   ];
 
   const socialLinks = [
@@ -18,25 +20,25 @@ export const Footer = () => {
       icon: Github, 
       label: "GitHub", 
       href: "https://github.com/yourusername",
-      username: "@yourusername"
+      username: t('footer.connect.github')
     },
     { 
       icon: Linkedin, 
       label: "LinkedIn", 
       href: "https://linkedin.com/in/yourprofile",
-      username: "Your Name"
+      username: t('footer.connect.linkedin')
     },
     { 
       icon: Twitter, 
       label: "Twitter", 
       href: "https://twitter.com/yourusername",
-      username: "@yourusername"
+      username: t('footer.connect.twitter')
     },
     { 
       icon: Mail, 
       label: "Email", 
       href: "mailto:your.email@example.com",
-      username: "your.email@example.com"
+      username: t('footer.connect.email')
     },
   ];
 
@@ -55,10 +57,9 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <h3 className="text-xl font-bold mb-3">Software Engineer</h3>
+            <h3 className="text-xl font-bold mb-3">{t('footer.title')}</h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Passionate about creating innovative solutions and building exceptional digital experiences. 
-              Let's collaborate and bring your ideas to life.
+              {t('footer.subtitle')}
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => {
@@ -81,7 +82,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.links.title')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -98,7 +99,7 @@ export const Footer = () => {
 
           {/* Connect Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.connect.title')}</h3>
             <ul className="space-y-3">
               {socialLinks.map((social, index) => (
                 <li key={index}>
@@ -120,8 +121,8 @@ export const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Your Name. All rights reserved. Built with{" "}
-              <Heart className="inline h-4 w-4 text-primary fill-primary" /> using React & TypeScript
+              {t('footer.copyright', { year: new Date().getFullYear() })} {" "}
+              <Heart className="inline h-4 w-4 text-primary fill-primary" /> {t('footer.builtWith')}
             </p>
             
             <Button
@@ -130,7 +131,7 @@ export const Footer = () => {
               onClick={scrollToTop}
               className="hover:bg-primary/10 hover:text-primary"
             >
-              Back to top
+              {t('footer.top')}
               <ArrowUp className="ml-2 h-4 w-4" />
             </Button>
           </div>

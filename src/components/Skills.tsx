@@ -1,21 +1,23 @@
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 export const Skills = () => {
+  const { t } = useTranslation();
   const skillCategories = [
     {
-      category: "Frontend",
+      category: t('skills.frontend'),
       skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "HTML/CSS"]
     },
     {
-      category: "Backend",
+      category: t('skills.backend'),
       skills: ["Node.js", "Python", "Express", "FastAPI", "REST APIs", "GraphQL"]
     },
     {
-      category: "Database",
+      category: t('skills.database'),
       skills: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Prisma"]
     },
     {
-      category: "Tools & Others",
+      category: t('skills.tools'),
       skills: ["Git", "Docker", "AWS", "CI/CD", "Jest", "Linux"]
     }
   ];
@@ -24,7 +26,7 @@ export const Skills = () => {
     <section className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl font-bold mb-12 text-center">
-          Skills & Technologies
+          {t('skills.title')}
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

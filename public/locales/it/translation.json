@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "greeting": "Ciao, sono",
+    "name": "Il tuo nome",
+    "title": "Ingegnere del software Full-Stack",
+    "subtitle": "Specializzato nella creazione di esperienze digitali eccezionali. Creo applicazioni web scalabili con un focus su codice pulito, architettura moderna ed esperienze utente eccezionali.",
+    "stats": {
+      "experience": "Anni di esperienza",
+      "projects": "Progetti completati",
+      "technologies": "Tecnologie"
+    },
+    "buttons": {
+      "work": "Guarda il mio lavoro",
+      "contact": "Mettiti in contatto",
+      "resume": "Scarica il curriculum"
+    },
+    "social": {
+      "github": "Profilo GitHub",
+      "linkedin": "Profilo LinkedIn",
+      "email": "Email"
+    }
+  },
+  "about": {
+    "title": "Riguardo a me",
+    "p1": "Sono un appassionato ingegnere del software con un forte focus sulla creazione di applicazioni web scalabili e sulla risoluzione di complesse sfide tecniche. Con competenza nelle moderne tecnologie web, trasformo le idee in soluzioni robuste e facili da usare.",
+    "p2": "Quando non sto programmando, mi troverete a esplorare nuove tecnologie, a contribuire a progetti open-source o a condividere le conoscenze con la comunità degli sviluppatori.",
+    "highlights": {
+      "code": {
+        "title": "Codice pulito",
+        "description": "Scrivere codice manutenibile, scalabile ed efficiente"
+      },
+      "delivery": {
+        "title": "Consegna rapida",
+        "description": "Sviluppo agile con cicli di iterazione rapidi"
+      },
+      "team": {
+        "title": "Giocatore di squadra",
+        "description": "Approccio collaborativo alla risoluzione dei problemi"
+      },
+      "innovation": {
+        "title": "Innovazione",
+        "description": "Stare al passo con le tecnologie all'avanguardia"
+      }
+    }
+  },
+  "skills": {
+    "title": "Competenze e tecnologie",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "tools": "Strumenti e altro"
+  },
+  "projects": {
+    "title": "Progetti in primo piano",
+    "subtitle": "Una raccolta dei miei lavori recenti e dei miei contributi open-source",
+    "error": "Impossibile recuperare i progetti GitHub. Riprova più tardi.",
+    "none": "Nessun repository pubblico trovato"
+  },
+  "contact": {
+    "title": "Lavoriamo insieme",
+    "subtitle": "Sono sempre aperto a discutere di nuovi progetti, idee creative o opportunità di far parte della tua visione.",
+    "email": "Email",
+    "location": "Posizione",
+    "city": "La tua città, Paese",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "title": "Ingegnere del software",
+    "subtitle": "Appassionato di creare soluzioni innovative e costruire esperienze digitali eccezionali. Collaboriamo e diamo vita alle tue idee.",
+    "links": {
+      "title": "Link veloci",
+      "about": "Riguardo a",
+      "skills": "Competenze",
+      "projects": "Progetti",
+      "contact": "Contatto"
+    },
+    "connect": {
+      "title": "Connetti",
+      "github": "@tuoutente",
+      "linkedin": "Il tuo nome",
+      "twitter": "@tuoutente",
+      "email": "tua.email@example.com"
+    },
+    "copyright": "© {{year}} Il tuo nome. Tutti i diritti riservati. Costruito con",
+    "builtWith": "usando React & TypeScript",
+    "top": "Torna in cima"
+  }
+}

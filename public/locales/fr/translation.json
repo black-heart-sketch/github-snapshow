@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Votre Nom",
+    "title": "Ingénieur Logiciel Full-Stack",
+    "subtitle": "Spécialisé dans la création d'expériences numériques exceptionnelles. Je crée des applications web évolutives en mettant l'accent sur un code propre, une architecture moderne et des expériences utilisateur exceptionnelles.",
+    "stats": {
+      "experience": "Années d'expérience",
+      "projects": "Projets terminés",
+      "technologies": "Technologies"
+    },
+    "buttons": {
+      "work": "Voir mon travail",
+      "contact": "Contactez-moi",
+      "resume": "Télécharger le CV"
+    },
+    "social": {
+      "github": "Profil GitHub",
+      "linkedin": "Profil LinkedIn",
+      "email": "Email"
+    }
+  },
+  "about": {
+    "title": "À propos de moi",
+    "p1": "Je suis un ingénieur logiciel passionné, spécialisé dans la création d'applications web évolutives et la résolution de défis techniques complexes. Avec une expertise dans les technologies web modernes, je transforme les idées en solutions robustes et conviviales.",
+    "p2": "Quand je ne code pas, vous me trouverez à explorer de nouvelles technologies, à contribuer à des projets open-source ou à partager mes connaissances avec la communauté des développeurs.",
+    "highlights": {
+      "code": {
+        "title": "Code propre",
+        "description": "Écrire du code maintenable, évolutif et efficace"
+      },
+      "delivery": {
+        "title": "Livraison rapide",
+        "description": "Développement agile avec des cycles d'itération rapides"
+      },
+      "team": {
+        "title": "Esprit d'équipe",
+        "description": "Approche collaborative de la résolution de problèmes"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Rester à la pointe avec des technologies de pointe"
+      }
+    }
+  },
+  "skills": {
+    "title": "Compétences et technologies",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de données",
+    "tools": "Outils et autres"
+  },
+  "projects": {
+    "title": "Projets en vedette",
+    "subtitle": "Une collection de mes travaux récents et de mes contributions open-source",
+    "error": "Échec de la récupération des projets GitHub. Veuillez réessayer plus tard.",
+    "none": "Aucun dépôt public trouvé"
+  },
+  "contact": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités de faire partie de votre vision.",
+    "email": "Email",
+    "location": "Lieu",
+    "city": "Votre ville, pays",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "title": "Ingénieur Logiciel",
+    "subtitle": "Passionné par la création de solutions innovantes et la création d'expériences numériques exceptionnelles. Collaborons et donnons vie à vos idées.",
+    "links": {
+      "title": "Liens rapides",
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "connect": {
+      "title": "Connecter",
+      "github": "@votreutilisateur",
+      "linkedin": "Votre Nom",
+      "twitter": "@votreutilisateur",
+      "email": "votre.email@example.com"
+    },
+    "copyright": "© {{year}} Votre Nom. Tous droits réservés. Construit avec",
+    "builtWith": "en utilisant React & TypeScript",
+    "top": "Retour en haut"
+  }
+}
