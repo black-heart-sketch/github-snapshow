@@ -33,7 +33,7 @@ export const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300"
+              className="p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300"
             >
               <h3 className="text-2xl font-semibold mb-4 text-primary">{category.category}</h3>
               <div className="flex flex-wrap gap-2">
@@ -41,7 +41,7 @@ export const Skills = () => {
                   <Badge 
                     key={skillIndex}
                     variant="secondary"
-                    className="px-4 py-2 text-sm bg-secondary/50 hover:bg-secondary transition-colors"
+                    className="px-4 py-2 text-sm"
                   >
                     {skill}
                   </Badge>

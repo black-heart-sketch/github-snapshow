@@ -15,14 +15,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20 animate-pulse" style={{ animationDuration: '8s' }}></div>
-      
-      {/* Floating orbs for visual interest */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
-      
+    <section className="relative min-h-screen flex items-center justify-center px-6 bg-background">
       <div className="container relative z-10 text-center">
         <div className="mb-6 inline-block animate-fade-in">
           <div className="h-32 w-32 mx-auto rounded-full bg-gradient-to-r from-primary to-accent p-1">

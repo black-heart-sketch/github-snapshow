@@ -18,10 +18,10 @@ export const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <a 
             href="mailto:your.email@example.com"
-            className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] group"
+            className="p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] group"
           >
             <div className="flex items-start gap-4">
-              <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 group-hover:scale-110 transition-transform">
+              <div className="p-3 rounded-lg bg-primary/10 group-hover:scale-110 transition-transform">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
@@ -31,9 +31,9 @@ export const Contact = () => {
             </div>
           </a>
 
-          <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
+          <div className="p-6 rounded-lg border border-border bg-card">
             <div className="flex items-start gap-4">
-              <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
+              <div className="p-3 rounded-lg bg-primary/10">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <div>

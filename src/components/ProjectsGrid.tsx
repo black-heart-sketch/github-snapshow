@@ -150,7 +150,7 @@ export const ProjectsGrid = () => {
   }
 
   return (
-    <section id="projects" className="py-20 px-6 bg-muted/30">
+    <section id="projects" className="py-20 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-4xl font-bold mb-4 text-center">
           {t('projects.title')}
