@@ -14,7 +14,7 @@ interface Repository {
   default_branch: string;
 }
 
-const GITHUB_USERNAME = "yourusername"; // Replace with your GitHub username
+const GITHUB_USERNAME = "black-heart-sketch"; // Replace with your GitHub username
 
 export const ProjectsGrid = () => {
   const [projects, setProjects] = useState<Repository[]>([]);
